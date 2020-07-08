@@ -1,0 +1,81 @@
+function computerPlay() {
+  let choice = ["Rock", "Paper", "Scissors"];
+  let move = choice[Math.floor(Math.random() * choice.length)];
+  return move
+    }
+function playRound(playerSelection, computerSelection) {
+	let c = computerSelection.toLowerCase();
+  let p = playerSelection.toLowerCase();
+  // I need to figure out what im going to return.
+  // I need it to be able to count wins and loses.
+  // I also need it to track the game so I can refer to
+  // the string later.
+
+  // maybe i can do it like ..
+  //if outcome is 2 here,
+  // there..
+  // if outcome was 2 then output to console.log this
+  // and go counterwins + 1
+
+  //then at the end.. if wins is less than 3? output you lost. and show score.
+  // no no.. we want to do it logically.
+  // logically would be..
+  // to return two variables.
+  // outcomestring..
+  //and either cwin or pwin
+  //then count the number of cwin and pwin
+  //then compare cwin against pwin
+
+  //so first i need to find out how to return two different
+  //variables.
+  if (c == "rock" && p == "rock") {
+  	let outcome = 1 //Tie
+  	//let outcome = "It's a Tie! Rock and Rock."
+    return outcome
+  }
+  else if (c == "rock" && p == "paper") {
+    let outcome = 2 //Win
+
+    //let outcome = "You Win! Paper beats Rock."
+    return outcome
+  }
+  else if (c == "rock" && p == "scissors") {
+    let outcome = 3 //Lose
+
+    //let outcome = "You Lose! Rock beats Scissors."
+    return outcome
+  }
+   else if (c == "scissors" && p == "rock") {
+    //let outcome = "You Win! Rock beats Scissors."
+    return outcome
+  }
+  else if (c == "scissors" && p == "paper") {
+    //let outcome = "You Lose! Scissors beats Paper."
+    return outcome
+  }
+   else if (c == "scissors" && p == "scissors") {
+    //let outcome = "It's a Tie! Scissors and Scissors."
+    return outcome
+  }
+  else if (c == "paper" && p == "rock") {
+    //let outcome = "You Lose! Paper beats Rock."
+    return outcome
+  }
+  else if (c == "paper" && p == "paper") {
+    //let outcome = "It's a Tie! Paper and Paper."
+    return outcome
+  }
+  else if (c == "paper" && p == "scissors") {
+    //let outcome = "You Win! Scissors beats Paper."
+    return outcome
+  }
+
+}
+function game() {
+	playRound(playerSelection, computerSelection)
+
+}
+const playerSelection = 'rock'
+const computerSelection = computerPlay()
+console.log(playRound(playerSelection, computerSelection))
+console.log(game)
